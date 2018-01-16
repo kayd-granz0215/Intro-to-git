@@ -17,7 +17,9 @@ var commentRoute     = require("./routes/comments"),
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/yelp_camp_v11", {
+
+mongoose.connect("mongodb://kayd_granz:Taiwo123@ds257077.mlab.com:57077/kay_yelpcamp1", {
+// mongoose.connect("mongodb://localhost/yelp_camp_v11", {
      keepAlive: true,
      reconnectTries: Number.MAX_VALUE,
      useMongoClient: true,  
