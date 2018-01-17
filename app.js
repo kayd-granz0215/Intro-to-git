@@ -15,11 +15,11 @@ var commentRoute     = require("./routes/comments"),
     campgroundRoute  = require("./routes/campgrounds"),
     authRoute        = require("./routes/auth");
 
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v11"
 
 
 mongoose.Promise = global.Promise;
-// mongoose.connect("mongodb://kayd_granz:Taiwo123@ds257077.mlab.com:57077/kay_yelpcamp1", 
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(url, {
      keepAlive: true,
      reconnectTries: Number.MAX_VALUE,
      useMongoClient: true,  
